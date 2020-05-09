@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./html/index.css">
+  <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+  <title>乐视-购物车</title>
+  <style>
+    #app {
+      margin: 0 auto;
+      width: 1497px;
+      background-color: #f2f2f2;
+    }
+    #cartpic{
+      width: 459px;
+      height: 50px;
+      display: block;
+      float: right;
+      padding-top: 10px;
+    }
+    #cartpic>img{
+      width: 100%;
+      height: 105px;
+
+    }
+    #logo{
+      width: 345px;
+      height: 136px;
+      float: left;
+    }
+    #logo>img{
+      height: 100%;
+    }
+    #logo>span{
+      float: left;
+    }
+
+    #shopnav{
+      width: 100%;
+      height: 65px;
+    }
+    #allshop{
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      
+    }
+    #allshop :hover{
+      color: rgb(209, 33, 33);
+      cursor: pointer;
+      
+    }
+    #allshop>span{
+      height: 100%;
+      width: 160px;
+      font-size: 26px;
+      font-weight: 900;
+      font-family: "微软雅黑";
+      float: left;
+      padding-left: 30px;
+    }
+    #my{
+      padding-top: 20px;
+      width: 160px;
+      
+      line-height: 115px;
+      font-size: 20px;
+      color: rgb(16, 153, 233);
+      display: block;
+      float: left;
+    }
+    #box{
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+    #box table{
+      width: 100%;
+      height: 100%;
+    }
+    #theader{
+      width: 100%;
+      height: 50px;
+    }
+    #pic{
+      width: 150px;
+      height: 185px;
+    }
+    #pic>img{
+      width: 100%;
+      height:100%;
+    }
+    #shopName{
+      width: 520px;
+      text-align: center;
+    }
+    #quan{
+
+    }
+    #pay{
+      width: 160px;
+      height: 60px;
+      background-color: red;
+      color: white;
+    }
+    #shopLike{
+      width: 230px;
+      height:340px;
+    }
+    #shopLike>img{
+      width: 100%;
+      height: 100%;
+    }
+    #like{
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header">
+    <div id="app">
+      <div id="top-header">
+        <ul id="top-headerLeft">
+          <li>商城首页 &nbsp;&nbsp; </li>
+          <li><a href="../login.html">登录</a> | <a href="../reg.html">注册</a></li>
+        </ul>
+        <ul id="top-headerRight">
+          <li><a href="#">个人中心</a></li>
+          <li><a href="#"></a>合作渠道</a></li>
+          <li><a href="#"></a>帮助中心</a></li>
+          <li><a href="#"></a>手机版</a></li>
+        </ul>
+      </div>
+      <div id="search-header">
+        <span id="logo">
+          <a href="../index.html"><img src="./img/lemall_logo.png" alt=""></a>
+        </span>
+        <div id="my">我的购物车</div>
+        <div id="cartpic">
+          <img src="./img/cart.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="app">
+    <div id="shopnav">
+      
+      <div id="allshop">
+        <span>全部商品</span>
+      </div>
+    </div>  
+    </div>  
+<div id="app">
+  <div id="box">        
+    <table>
+            <tr id="theader">
+                <td>
+                    <input type="checkbox" >
+                </td>
+                <td>全选</td>
+                <td>商品</td>
+                <td>单价（元）</td>
+                <td>数量</td>
+                <td>小计</td>
+                <td>操作</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" >
+                </td>
+                <td id="pic"><img src="./img/1587094178842.jpg" alt=""></td>
+                <td id="shopName">乐视（Letv）超级电视 Y32 32英寸 1GB+8GB大存储 HD高清屏人工智能网络液晶高保真音质平板小客厅卧室电视 1000以下 40吋以下</td>
+                <td>4699</td>
+                <td>
+                        <input type="button" class="reduceBtn" value="-">
+                        <span>1</span>
+                        <input type="button" class="addBtn" value="+">
+                </td>
+                <td>4699</td>
+                <td>
+                    <input class="delBtn" type="button" value="删除">
+                </td>
+            </tr>
+            <tr>
+              <td colspan="6" style="text-align: center" >
+                  总金额：<span>0</span>
+              </td>
+              <td id="pay" colspan="2"style="text-align:center">结算</td>
+          </tr>
+    </table>
+</div>
+</div>
+  
+
+<div id="app">
+  <div id="like">
+    <span>猜你喜欢</span>
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail" id="shopLike">
+          <img src="./img/1562294116772.jpg" alt="...">
+          <div class="caption">
+            
+            <p>乐视热水器</p>
+            <span>￥199</span>
+            <p><a href="#" class="btn btn-primary" role="button">查看详情</a> <a href="#" class="btn btn-default" role="button">加入购物车</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="service">
+    <div id="service-ser">
+      <div></div><span>正品保障</span>
+    </div>
+    <div id="service-ser">
+      <div></div><span>7天无理由退还</span>
+    </div>
+    <div id="service-ser">
+      <div></div><span>物流服务</span>
+    </div>
+    <div id="service-ser">
+      <div></div><span>售后网点</span>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <iframe src="./html/footer.html" width="100%" height="362px" frameborder="0" scrolling="no"></iframe>
+  </div>
+</body>
+</html>
+<script src="./bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+<script src="js/check.js"></script>
+<script>
+
+$(function(){     
+    $("table :checkbox:eq(0)").check($("table :checkbox:gt(0)"));
+
+    $(":checkbox").click(function(){
+        totalMoney();
+    });
+
+    $(".addBtn").click(function(){
+        // 数量
+        let count = $(this).prev().html();
+        count++;
+        $(this).prev().html(count);
+        // 单价
+        let price = $(this).parent().prev().html();
+        // 计算金额
+        let money = price*count;
+        $(this).parent().next().html(money);
+
+        // 总金额
+        totalMoney();
+    });
+
+    
+    $(".reduceBtn").click(function(){
+        // 数量
+        let count = $(this).next().html();
+        count--;
+        if(count<1){
+            count=0;
+        }
+        $(this).next().html(count);
+        // 单价
+        let price = $(this).parent().prev().html();
+        // 计算金额
+        let money = price*count;
+        $(this).parent().next().html(money);
+
+        // 同时改变当前行的复选框的状态
+        if(count==0){
+            $(this).parent().parent().find(":checkbox").prop("checked",false);
+            // $(this).parent().parent().remove();
+        }
+
+        // 总金额
+        totalMoney();
+    });
+
+    $(".delBtn").click(function(){
+        if(confirm("亲，您真的要删除吗？")){
+            $(this).parent().parent().remove();
+            totalMoney();
+        }
+    });
+})
+// 感觉用户体验不怎么好，
+// 其实应该点击 + 或者 - 的时候或者点击选框的弟弟们任何一个时就触发选框的事件，
+// - 到 0 的时候就不选中选框了
+
+// 计算总金额
+function totalMoney(){
+    // 
+    let money =0;
+    let $tr = $("table tr:gt(0)").not("table tr:frist");
+    $tr.each(function(){
+        // 复选框是不是选中了
+        if($(this).find(":checkbox").prop("checked")){
+            money += parseFloat($(this).find("td").eq(5).html());
+        }
+    });
+    $("table tr:frist").find("span").html(money);    
+}
+    
+</script>
