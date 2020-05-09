@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+  <script src="./bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"> </script>
+  <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+  <title>乐视商城</title>
+  <style>
+    a {
+      text-decoration: none;
+      color: cornsilk;
+
+    }
+
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    #app {
+      margin: 0 auto;
+      width: 1497px;
+      background-color: #f2f2f2;
+    }
+
+    #header {
+      width: 100%;
+      background-color: white;
+      height: 190px;
+
+    }
+
+    #top-header {
+      width: 100%;
+      height: 40px;
+      background-color: #333333;
+    }
+
+    #search-header {
+      width: 100%;
+      height: 151px;
+    }
+
+    #banner {
+      width: 100%;
+      height: 526px;
+      /* background-color: aqua; */
+      position: relative;
+    }
+
+    #series {
+      width: 100%;
+      height: 176px;
+      /* background-color: bisque; */
+    }
+
+    #kind {
+      width: 100%;
+      height: 70px;
+
+      /* background-color: black; */
+
+    }
+
+    #kindLeft {
+      float: left;
+      padding-top: 12px;
+      display: block;
+    }
+
+    #kindLeft p {
+      display: inline-block;
+    }
+
+    #kindLeft :first-child {
+      font-size: 20px;
+      font-weight: 900;
+      font-family: '微软雅黑';
+    }
+
+    #kindRight {
+      width: 414px;
+      height: 50px;
+      float: right;
+      line-height: 80px;
+    }
+
+    #kindRight ul {
+      width: 100%;
+      height: 49px;
+
+    }
+
+    #kindRight ul li {
+      float: left;
+      list-style: none;
+      height: 49px;
+    }
+
+    #godslist {
+      width: 100%;
+      height: 946px;
+    }
+    #parts-type{
+      width: 100%;
+      height: 30px;
+    }
+    #parts-typeLeft{
+      float: left;
+      height: 79px;
+    }
+    #parts-typeRight ul{
+      
+    }
+    #parts {
+      width: 100%;
+      height: 762px;
+    }
+    #parts-left{
+      width: 297px;
+      height: 762px;
+      float: left;
+    }
+    #parts-left img{
+      width: 100%;
+      height: 762px;
+    }
+    #parts-right{
+      width: 1184px;
+      height: 100%;
+      float: left;
+    }
+    #parts-show{
+      width: 286px;
+      height: 377px;
+    }
+    #service {
+      width: 100%;
+      height: 137px;
+      /* background-color: blue;s */
+      display: flex;
+    }
+    
+    #service-ser{
+      flex: 25%;
+      padding-top: 60px;
+      padding-left: 100px ;
+
+    }
+    #service-ser div{
+      border: 1px solid black;
+      border-radius: 50%;
+      width: 47px;
+      height: 47px;
+      float: left;
+    }
+    #service-ser span{
+      float: left;
+      padding-top:15px ;
+      padding-left: 15px;
+      font-size: 15px;
+    }
+    #footer {
+      width: 100%;
+      height: 362px;
+      background-color: #151515;
+    }
+
+    #footer-top {
+      width: 100%;
+      height: 298px;
+      background-color: #151515;
+    }
+    #footerTopLeft{
+      float: left;
+      width: 1115px;
+      height: 100%;
+    }
+    #footerTopLeft dl{
+      float: left;
+      width: 91px;
+      margin: 0 88px;
+      padding-top: 45px;
+    }
+    #footerTopLeft dl dt{
+      color: #c4c2c2;
+    }
+    #footerTopLeft dl dd{
+      padding-top: 17px;
+      color: #888888;
+    }
+    #footerTopRight{
+      float: left;
+      width: 200px;
+      height: 100%;
+      /* background-color: blue; */
+    }
+    #footerTopRight-phone{
+      width: 195px;
+      height: 88px;
+      
+      text-align: center;
+    }
+    #footerTopRight-phone>p{
+      color:#f0514f;
+      font-size:18px;
+      padding-top: 45px;
+    }
+    #footerTopRight-server{
+      width: 195px;
+      height: 43px;
+      background-color: #2d2c2d;
+    }
+    #footerTopRight-server p{
+      font-size: 16px;
+      text-align: center;
+      color: #ffffff;
+      padding-top: 10px ;
+    }
+    #footerTopRight-time{
+      width: 195px;
+      height: 52px;
+    }
+    #footerTopRight-time>p{
+      font-size: 14px;
+      text-align: center;
+      color: #ffffff;
+      margin: 0;
+    }
+    #footerTopRight-skip{
+      width: 195px;
+      height: 60px;
+      text-align: center;
+
+    }
+    #footerTopRight-skip>p{
+      font-size: 14px;
+      color: #888888;
+      margin: 0;
+    }
+    #footer-floot {
+      width: 100%;
+      height: 65px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      background-color: #151515;
+      color: #888888;
+
+    }
+    #top-headerLeft {
+      width: 156px;
+      height: 100%;
+      margin-bottom: 0;
+      float: left;
+    }
+
+    #top-headerLeft li {
+      float: left;
+      color: cornsilk;
+      line-height: 40px;
+      list-style: none;
+    }
+
+    #top-headerRight {
+      width: 400px;
+      float: right;
+      height: 100%;
+      list-style: none;
+
+    }
+
+    #top-headerRight li {
+      margin-left: 32px;
+      margin-left: 32px;
+      color: cornsilk;
+      float: left;
+      line-height: 40px;
+
+    }
+
+    #logo {
+      width: 247px;
+      height: 151px;
+      float: left;
+      margin-left: 18px;
+      display: block;
+    }
+
+    #logo img {
+      width: 100%;
+      height: 100%;
+    }
+
+    #search {
+      width: 751px;
+      height: 150px;
+      float: left;
+    }
+
+    #search>span {
+      float: left;
+      padding-top: 50px;
+    }
+
+    #search p {
+      color: #2884c7;
+    }
+
+    #search-Txt {
+      width: 578px;
+      height: 49px;
+      border: 2px solid #2884c7;
+      border-right: none;
+    }
+
+    #search-Btn {
+      width: 167px;
+      height: 53px;
+      background-color: #2884c7;
+      text-align: center;
+      border: 2px solid #2884c7;
+      font-size: 24px;
+      color: cornsilk;
+
+    }
+
+    #car {
+      width: 152px;
+      height: 50px;
+      border: 1px solid #dddddd;
+      float: left;
+      margin-left: 33px;
+    }
+
+    #two-code {
+      width: 111px;
+      height: 100px;
+      float: left;
+      border: 1px solid #dddddd;
+      margin-left: 35px;
+
+    }
+
+    #two-code>img {
+      width: 100%;
+      height: 100%;
+    }
+
+    #banner>img {
+      width: 100%;
+    }
+
+    #submenu {
+      width: 245px;
+      height: 526px;
+      position: absolute;
+      top: 0px;
+      background-color: #322724;
+      opacity: 0.8;
+      float: left;
+    }
+
+    #submenu ul {
+      width: 100%;
+      height: 100%;
+      list-style: none;
+      display: inline-block;
+
+    }
+
+    #submenu ul li {
+      width: 246px;
+      height: 93px;
+      color: white;
+      font-size: 24px;
+      padding-left: 30px;
+      box-sizing: border-box;
+
+
+    }
+
+    #submenu ul :first-child {
+      margin-top: 28px;
+    }
+
+    #system {
+      width: 299px;
+      position: absolute;
+      height: 505px;
+      right: 0px;
+      top: 8px;
+      background-color: #fefefe;
+      float: right;
+    }
+
+    #user-logo {
+      width: 80px;
+      height: 80px;
+      border: 1px solid #e8e8e8;
+      border-radius: 50%;
+      margin-top: 45px;
+      margin-left: 110px;
+
+    }
+
+    #user-logo img {
+      width: 100%;
+    }
+
+    #user-logo p {
+      margin-top: 10px;
+      margin-left: 15px;
+      font-size: 18px;
+    }
+
+    #welcome {
+      width: 100%;
+      height: 68px;
+      font-size: 18px;
+      color: #999999;
+      box-sizing: border-box;
+      padding-left: 85px;
+      padding-top: 18px;
+      line-height: 81px;
+      box-sizing: border-box;
+    }
+    # #welcome >p{
+      display: block;
+    }
+    #loginBtn {
+      width: 100%;
+      height: 72px;
+      box-sizing: border-box;
+    }
+
+    #loginBtn a{
+      width: 123px;
+      height: 40px;
+      display: block;
+      float: left;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 40px;
+      margin: 0 5px;
+    }
+
+    #loginBtn :first-child {
+      background-color: #2884c7;
+      font-size: 19px;
+      color: white;
+      margin-left: 20px;
+    }
+
+    #loginBtn :last-child {
+      background-color: #e6e6e6;
+      color: black;
+      font-size: 19px;
+    }
+
+    #system dl {
+      width: 100%;
+      height: 265px;
+    }
+
+    #system dl dt {
+      font-weight: 900;
+      font-family: '微软雅黑';
+      display: inline;
+    }
+
+    #system dl span {
+      color: #999999;
+      margin-left: 152px;
+    }
+
+    #system dl dd {
+      margin-top: 19px;
+    }
+
+    #series {
+      width: 100%;
+      height: 192px;
+      box-sizing: border-box;
+    }
+
+    .one {
+      display: block;
+      float: left;
+      width: 147px;
+      height: 100%;
+    }
+
+    .one a {
+      display: block;
+      margin-top: 17px;
+    }
+
+    .one a img {
+      width: 247px;
+      height: 176px;
+    }
+
+    .two {
+      width: 1236px;
+      float: left;
+      list-style: none;
+      margin-left: 110px
+    }
+
+    .two li {
+      width: 297px;
+      height: 100%;
+      margin-left: 12px;
+      margin-top: 17px;
+      float: left;
+      display: block;
+    }
+
+    .two li a img {
+      width: 100%;
+
+    }
+
+    .two li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    #godsList {
+      width: 100%;
+      height: 946px;
+      list-style: none;
+      box-sizing: border-box;
+    }
+
+    #list-banner {
+      width: 742px;
+      height: 466px;
+      float: left;
+      
+    }
+
+    #list-banner a img {
+      width: 100%;
+      height: 465px;
+    }
+
+    #lsit-show {
+      /* width: 363px;
+      height: 466px; */
+      width: 363px;
+      height: 466px;
+      /* float: left;
+    margin: 0 0 12px 12px;
+    text-align: center;
+    background-color: #fff; */
+      /* overflow: hidden;
+    position: relative; */
+      margin: 5 0 0 0;
+    }
+
+    /* #list-btn{
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    }
+    #list-pic{
+    width: 100%;
+    height: 230px;
+    margin: 24px auto 0;
+    overflow: hidden;
+    } */
+    .thumbnail {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    #godsType{
+      width: 100%;
+      height: 79px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <div id="header">
+    <div id="app">
+      <div id="top-header">
+        <ul id="top-headerLeft">
+          <li>商城首页 &nbsp;&nbsp; </li>
+          <li><a href="../login.html">登录</a> | <a href="../reg.html">注册</a></li>
+        </ul>
+        <ul id="top-headerRight">
+          <li><a href="#">个人中心</a></li>
+          <li><a href="#"></a>合作渠道</a></li>
+          <li><a href="#"></a>帮助中心</a></li>
+          <li><a href="#"></a>手机版</a></li>
+        </ul>
+      </div>
+      <div id="search-header">
+        <span id="logo">
+          <a href="./index.html"><img src="./img/lemall_logo.png" alt=""></a>
+        </span>
+        <div id="search">
+          <span><input id="search-Txt" type="text" placeholder="超级电视"></span>
+          <span><input id="search-Btn" type="button" value="搜索"></span>
+          <p>以旧换新&nbsp;&nbsp;&nbsp;&nbsp;以旧换新</p>
+        </div>
+        <div id="car">
+          <span><a href="../cart.html"></a>购物车</span>
+        </div>
+        <div id="two-code">
+          <p>APP下载</p>
+          <img src="./img/12540050008480802.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="app">
+    <!-- 头部结束 -->
+    <!-- 轮播图 -->
+    <div id="banner">
+      <div id="banner">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+          
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="./img/1587113413696.jpg" alt="...">
+                <div class="carousel-caption">
+                  ...
+                </div>
+              </div>
+              <div class="item">
+                <img src="./img/1587113413696.jpg" alt="...">
+                <div class="carousel-caption">
+                  ...
+                </div>
+              </div>
+              ...
+            </div>
+          
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+      <!-- 二级菜单 -->
+      <div id="submenu">
+        <ul>
+          <li>爆款推荐<span>></span></li>
+          <li>屏幕尺寸<span>></span></li>
+          <li>使用场景<span>></span></li>
+          <li>观看距离<span>></span></li>
+          <li>精选配件<span>></span></li>
+        </ul>
+      </div>
+      <div id="system">
+        <div id="user-logo">
+          <img src="./img/default.jpg">
+          <p>Hi,您好</p>
+        </div>
+        <div id="welcome">
+          <p>欢迎来到乐视商城</p>
+        </div>
+        <div id="loginBtn">
+          <a href="./login.html">登录</a>
+          <a href="./reg.html">注册</a>
+        </div>
+
+
+        <hr />
+        <dl>
+          <dt>商城咨询 </dt><span>更多>></span>
+          <dd>【咨询】 &nbsp;挂架适配机型明细</dd>
+          <dd>【声明】 &nbsp;防诈骗声明</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- 轮播图结束 -->
+    <!-- 系列开始 -->
+    <div id="series">
+      <div class="one">
+        <a href="#"><img src="./img/20190524.jpg"></a>
+      </div>
+
+      <ul class="two">
+        <li><a href="#"><img src="./img/1558611919961.jpg"></a></li>
+        <li><a href="#"><img src="./img/1558612131852.jpg"></a></li>
+        <li><a href="#"><img src="./img/1558612250063.jpg"></a></li>
+        <li><a href="#"><img src="./img/1558612332873.jpg"></a></li>
+      </ul>
+    </div>
+    <!-- 系列结束 -->
+    <div id="kind">
+      <div id="kindLeft">
+        <p>超级电视&nbsp;&nbsp;|</p>
+        <p>&nbsp;&nbsp;运营家庭美好生活</p>
+      </div>
+      <div id="kindRight">
+        <ul>
+          <li>40吋&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
+          <li>50吋&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
+          <li>55吋&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
+          <li>60吋&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+          <li>更多选择》</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 商品列表 -->
+    <div id="godslist">
+      <ul id="godsList" class="row">
+        <li id="list-banner">
+          <a href="#"> <img src="./img/1587103562366.jpg" alt=""></a>
+        </li>
+        <li>
+          <div class="row">
+            
+
+                    <div class="col-sm-6 col-md-3">
+                      <div class="thumbnail" id="lsit-show">
+                        <img src="./img/1587094178842.jpg" alt="...">
+                        <div class="caption">
+                          <div id="list-btn"><span>超划算</span><span>热卖</span></div>
+                          <div id="list-type"><strong>超级电视Y32</strong></div>
+                          <p>小厅智能追剧神器 | 送半年乐视会员卡</p>
+                          <div id="lsit-price">￥679</div>
+                          <div id="list-buy"></div>
+                        </div>
+                      </div>
+                    </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail" id="lsit-show">
+                <img src="./img/1587094178842.jpg" alt="...">
+                <div class="caption">
+                  <div id="list-btn"><span>超划算</span><span>热卖</span></div>
+                  <div id="list-type"><strong>超级电视Y32</strong></div>
+                  <p>小厅智能追剧神器 | 送半年乐视会员卡</p>
+                  <div id="lsit-price">￥679</div>
+                  <div id="list-buy"></div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail" id="lsit-show">
+                <img src="./img/1587094178842.jpg" alt="...">
+                <div class="caption">
+                  <div id="list-btn"><span>超划算</span><span>热卖</span></div>
+                  <div id="list-type"><strong>超级电视Y32</strong></div>
+                  <p>小厅智能追剧神器 | 送半年乐视会员卡</p>
+                  <div id="lsit-price">￥679</div>
+                  <div id="list-buy"></div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail" id="lsit-show">
+                <img src="./img/1587094178842.jpg" alt="...">
+                <div class="caption">
+                  <div id="list-btn"><span>超划算</span><span>热卖</span></div>
+                  <div id="list-type"><strong>超级电视Y32</strong></div>
+                  <p>小厅智能追剧神器 | 送半年乐视会员卡</p>
+                  <div id="lsit-price">￥679</div>
+                  <div id="list-buy"></div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail" id="lsit-show">
+                <img src="./img/1587094178842.jpg" alt="...">
+                <div class="caption">
+                  <div id="list-btn"><span>超划算</span><span>热卖</span></div>
+                  <div id="list-type"><strong>超级电视Y32</strong></div>
+                  <p>小厅智能追剧神器 | 送半年乐视会员卡</p>
+                  <div id="lsit-price">￥679</div>
+                  <div id="list-buy"></div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail" id="lsit-show">
+                <img src="./img/1587094178842.jpg" alt="...">
+                <div class="caption">
+                  <div id="list-btn"><span>超划算</span><span>热卖</span></div>
+                  <div id="list-type"><strong>固定挂架</strong></div>
+                  <p>小厅智能追剧神器 | 送半年乐视会员卡</p>
+                  <div id="lsit-price">￥679</div>
+                  <div id="list-buy"></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    </li>
+    </ul>
+    </div>
+  <!-- 商品结束 -->
+
+  <!-- 配件开始 -->
+
+      <div id="parts">
+        <div id="parts-left">
+          <img src="./img/1587115655199.jpg" alt="">
+        </div>
+        <div id="parts-right">
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail" id="parts-show">
+                <img src="./img/1587107296783.jpg" alt="...">
+                <div class="caption">
+                  <div id="parts-type"><strong>固定挂架</strong></div>
+                  <p>小厅智能追剧神器 | 送半年乐视会员卡</p>
+                  <div id="parts-price">￥679</div>
+                  <div id="parts-buy"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail" id="parts-show">
+                <img src="./img/1587107296783.jpg" alt="...">
+                <div class="caption">
+                  <div id="parts-type"><strong>固定挂架</strong></div>
+                  <p>小厅智能追剧神器 | 送半年乐视会员卡</p>
+                  <div id="parts-price">￥679</div>
+                  <div id="parts-buy"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail" id="parts-show">
+                <img src="./img/1587107296783.jpg" alt="...">
+                <div class="caption">
+                  <div id="parts-type"><strong>固定挂架</strong></div>
+                  <p>小厅智能追剧神器 | 送半年乐视会员卡</p>
+                  <div id="parts-price">￥679</div>
+                  <div id="parts-buy"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail" id="parts-show">
+                <img src="./img/1587107296783.jpg" alt="...">
+                <div class="caption">
+                  <div id="parts-type"><strong>固定挂架</strong></div>
+                  <p>小厅智能追剧神器 | 送半年乐视会员卡</p>
+                  <div id="parts-price">￥679</div>
+                  <div id="parts-buy"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail" id="parts-show">
+                <img src="./img/1587107296783.jpg" alt="...">
+                <div class="caption">
+                  <div id="parts-type"><strong>固定挂架</strong></div>
+                  <p>小厅智能追剧神器 | 送半年乐视会员卡</p>
+                  <div id="parts-price">￥679</div>
+                  <div id="parts-buy"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail" id="parts-show">
+                <img src="./img/1587107296783.jpg" alt="...">
+                <div class="caption">
+                  <div id="parts-type"><strong>固定挂架</strong></div>
+                  <p>小厅智能追剧神器 | 送半年乐视会员卡</p>
+                  <div id="parts-price">￥679</div>
+                  <div id="parts-buy"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail" id="parts-show">
+                <img src="./img/1587107296783.jpg" alt="...">
+                <div class="caption">
+                  <div id="parts-type"><strong>固定挂架</strong></div>
+                  <p>小厅智能追剧神器 | 送半年乐视会员卡</p>
+                  <div id="parts-price">￥679</div>
+                  <div id="parts-buy"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail" id="parts-show">
+                <img src="./img/1587107296783.jpg" alt="...">
+                <div class="caption">
+                  <div id="parts-type"><strong>固定挂架</strong></div>
+                  <p>小厅智能追剧神器 | 送半年乐视会员卡</p>
+                  <div id="parts-price">￥679</div>
+                  <div id="parts-buy"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="service">
+        <div id="service-ser">
+          <div></div><span>正品保障</span>
+        </div>
+        <div id="service-ser">
+          <div></div><span>7天无理由退还</span>
+        </div>
+        <div id="service-ser">
+          <div></div><span>物流服务</span>
+        </div>
+        <div id="service-ser">
+          <div></div><span>售后网点</span>
+        </div>
+      </div>
+    </div>
+  
+  <!-- 配件结束 -->
+
+  <!-- 服务开始 -->
+  <!-- 服务结束 -->
+  </div>
+  <div id="footer">
+  <iframe src="./html/footer.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+  </div>
+
+</body>
+
+</html>
